@@ -232,9 +232,9 @@ string LinuxParser::User(std::string uid) {
       break;
     }
   }
+  target.resize(7,' ');
   return target; 
 
-  return string(); 
   }
 
 // TODO: Read and return the uptime of a process

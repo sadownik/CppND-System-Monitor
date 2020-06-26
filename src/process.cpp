@@ -44,7 +44,9 @@ string Process::Ram() {
 // TODO: Return the user (name) that generated this process
 string Process::User() { 
     uid_ =  LinuxParser::Uid(pid_); 
-    return LinuxParser::User(uid_);
+    string username =  LinuxParser::User(uid_);
+    username.resize(7);
+    return username;
     
 }
 
